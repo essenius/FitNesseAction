@@ -1,5 +1,5 @@
 # FitNesseAction
-Demo GitHub Action to run FitNesse with FitSharp using the [fitnesse-composite-action](../../../fitnesse-composite-action).
+Demo GitHub Action to run [FitNesse](http://fitnesse.org) with [FitSharp](https://fitsharp.github.io/) using the [fitnesse-composite-action](../../../fitnesse-composite-action).
 
 It uses .NET Core 5.0, so should be platform independent. It was tested only on GitHub hosted Linux runners.
 
