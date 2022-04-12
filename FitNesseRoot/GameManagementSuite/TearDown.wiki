@@ -1,0 +1,2 @@
+|Script|player management driver|
+|ensure|clear players           |

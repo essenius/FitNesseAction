@@ -1,0 +1,8 @@
+Attempting to register an already existing user should fail. Player count should remain the same, and skill levels should not be changed.
+
+|Script                    |player management driver                          |
+|reject duplicate on player|John                                              |
+|reject duplicate on player|Julie                                             |
+|note                      |Make sure that all still works after the duplicate|
+|ensure                    |add player      |Tina   |with skill   |advanced   |
+|check                     |player count    |>$players                        |

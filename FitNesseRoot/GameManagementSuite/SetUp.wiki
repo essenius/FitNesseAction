@@ -1,0 +1,7 @@
+!|Add Players                      |
+|Player Name|Skill       |Success?|
+|Steve      |beginner    |true    |
+|Julie      |intermediate|true    |
+|Bill       |intermediate|true    |
+|John       |advanced    |true    |
+

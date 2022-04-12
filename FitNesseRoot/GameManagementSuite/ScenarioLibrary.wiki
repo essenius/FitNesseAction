@@ -1,0 +1,6 @@
+|scenario |reject duplicate on player|player                    |
+|$skill=  |player                    |@player|if skill          |
+|$players=|player count                                         |
+|reject   |add player                |@player|with skill|unknown|
+|check    |player count              |$players                  |
+|check    |player                    |@player|if skill  |$skill |

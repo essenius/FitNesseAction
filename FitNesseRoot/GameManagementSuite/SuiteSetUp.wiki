@@ -1,0 +1,6 @@
+|Define table type                           |
+|add players             |as Decision        |
+|overview                |as Table           |
+|players with skill      |as Query           |
+|skills overview         |as Dynamic Decision|
+|player management driver|as Script          |
