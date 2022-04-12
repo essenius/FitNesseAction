@@ -1,0 +1,38 @@
+name: FitNesse Composite Test
+
+on: [workflow_dispatch]
+
+jobs:
+  fitnesse-runner:
+    runs-on: ubuntu-latest
+    name: Run a FitNesse test or suite
+    env:
+      FIXTURES: ${{github.workspace}}/fixtures
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v3
+      - name: Configure dotnet
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '5.0.x'
+      - name: Download, build and publish Fibonacci Fixture
+        run: |
+          mkdir -p ${{env.FIXTURES}}
+          cd ${{runner.temp}}
+          git clone https://github.com/essenius/FitNesseFitSharpFibonacciDemo.git fibdemo
+          dotnet publish fibdemo/ExtendedMath/ExtendedMathFixtures/ExtendedMathFixtures.csproj --output ${{env.FIXTURES}}/ExtendedMath --framework net5.0 --configuration release
+          git clone https://github.com/essenius/FitNesseFitSharpGameManagementDemo.git gamedemo
+          dotnet build --configuration release gamedemo/GameManagement/GameManagement.sln
+          mkdir ${{env.FIXTURES}}/GameManagement
+          cp -R gamedemo/GameManagement/GameManagementFixtures/bin/Release/net5.0/* ${{env.FIXTURES}}/GameManagement/
+          rm -rf ./*
+          cd ${{github.workspace}}
+          ls -lsR
+      - name: FitNesse run
+        uses: essenius/fitnesse-composite-action@v0.31
+        with:
+          test-spec: DemoSuite?suite
+          fixture-folder:  ${{env.FIXTURES}}
+      - name: check
+        if: always()
+        run: ls -lsR ${{github.workspace}}
