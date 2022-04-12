@@ -25,5 +25,5 @@ Details can be found in the artifacts delivered with the test run (see summary p
   * `DetailedResults.html`: the test log showing the tests that have ran (viewable in a browser). 
   * `results_nunit.xml`: the test results in NUnit3 format.
 
-#@ Contribute
+## Contribute
 Enter an [issue](../../issues) or provide a [pull request](../../pulls). 
