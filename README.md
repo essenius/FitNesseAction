@@ -5,7 +5,7 @@ It uses .NET Core 5.0, so should be platform independent. It was tested (only) o
 
 Check out [fitnesse-run.yml](.github/workflows/fitnesse-run.yml) for the action script.
 
-## How it works:
+## Setting things up:
 * Prepare the Wiki test pages in the [FitNesseRoot](FitNesseRoot) folder. 
 * Create [config.xml](fixtures/config.xml) in the fixtures folder, pointing to all relevant assemblies.
 * In the action script, download the required fixtures. Make sure they end up in the location that config.xml refers to.
