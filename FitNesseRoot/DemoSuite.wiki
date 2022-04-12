@@ -1,0 +1,7 @@
+!|Suite             |
+|Page |FibonacciTest|
+|Title|.*           |
+
+!|Suite                   |
+|Page |GameManagementSuite|
+|Title|.*                 |
