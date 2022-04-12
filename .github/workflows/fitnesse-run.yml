@@ -27,12 +27,8 @@ jobs:
           cp -R gamedemo/GameManagement/GameManagementFixtures/bin/Release/net5.0/* ${{env.FIXTURES}}/GameManagement/
           rm -rf ./*
           cd ${{github.workspace}}
-          ls -lsR
       - name: FitNesse run
-        uses: essenius/fitnesse-composite-action@v0.31
+        uses: essenius/fitnesse-composite-action@v0.32
         with:
           test-spec: DemoSuite?suite
           fixture-folder:  ${{env.FIXTURES}}
-      - name: check
-        if: always()
-        run: ls -lsR ${{github.workspace}}
