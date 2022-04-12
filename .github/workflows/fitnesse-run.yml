@@ -30,6 +30,6 @@ jobs:
       - name: FitNesse run
         uses: essenius/fitnesse-composite-action@v0.33
         with:
-          test-spec: DemoSuite?suite
+          test-spec: ErrorSuite?suite
           fixture-folder:  ${{env.FIXTURES}}
           test-result-artifact: fitnesse-demosuite
