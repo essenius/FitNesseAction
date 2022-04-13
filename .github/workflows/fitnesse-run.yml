@@ -15,7 +15,7 @@ jobs:
         uses: actions/setup-dotnet@v2
         with:
           dotnet-version: '5.0.x'
-      - name: Download, build and publish Fibonacci Fixture
+      - name: Download, build and publish Fibonacci and GameManagement Fixtures
         run: |
           mkdir -p ${{env.FIXTURES}}
           cd ${{runner.temp}}
