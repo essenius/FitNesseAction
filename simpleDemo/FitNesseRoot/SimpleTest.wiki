@@ -1,0 +1,7 @@
+!|import|
+|fitnesse.fixtures|
+
+!|script|echo fixture|
+|ensure|echo|true|
+|reject|echo|false|
+|echo|null|
