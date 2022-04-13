@@ -33,3 +33,4 @@ jobs:
           test-spec: DemoSuite?suite
           fixture-folder:  ${{env.FIXTURES}}
           test-result-artifact: fitnesse-demosuite
+          include-html: false
