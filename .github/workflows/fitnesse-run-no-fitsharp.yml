@@ -16,5 +16,5 @@ jobs:
         with:
           test-spec: SimpleTest?test
           fixture-folder: ${{github.workspace}}/simpleDemo
-          test-result-artifact: fitnesse-demosuite
+          test-result-artifact: fitnesse-simpleDemo
           fitnesse-folder: ${{github.workspace}}/simpleDemo
