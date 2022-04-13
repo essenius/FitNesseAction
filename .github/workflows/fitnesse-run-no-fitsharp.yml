@@ -1,4 +1,4 @@
-name: FitNesse Composite Test
+name: FitNesse Composite Test No FitSharp
 
 on: [workflow_dispatch]
 
