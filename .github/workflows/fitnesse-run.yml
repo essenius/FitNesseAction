@@ -28,7 +28,7 @@ jobs:
           rm -rf ./*
           cd ${{github.workspace}}
       - name: FitNesse run
-        uses: essenius/fitnesse-composite-action@v0.40
+        uses: essenius/fitnesse-composite-action@v0.41
         with:
           test-spec: DemoSuite?suite
           fixture-folder:  ${{env.FIXTURES}}
