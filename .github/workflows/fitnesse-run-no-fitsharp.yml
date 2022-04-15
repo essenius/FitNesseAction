@@ -12,7 +12,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v3
       - name: FitNesse run
-        uses: essenius/fitnesse-composite-action@v0.38
+        uses: essenius/fitnesse-composite-action@v0.39
         with:
           test-spec: SimpleTest?test
           fixture-folder: ${{github.workspace}}/simpleDemo
