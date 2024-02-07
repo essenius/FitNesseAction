@@ -8,6 +8,7 @@ jobs:
     name: Run a FitNesse test or suite
     env:
       FIXTURES: ${{github.workspace}}/fixtures
+      TZ: Europe/Amsterdam
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
