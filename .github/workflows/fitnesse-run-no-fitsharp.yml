@@ -10,7 +10,7 @@ jobs:
       FIXTURES: ${{github.workspace}}/fixtures
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: FitNesse run
         uses: essenius/fitnesse-composite-action@v1
         with:
